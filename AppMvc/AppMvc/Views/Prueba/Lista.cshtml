@@ -1,9 +1,18 @@
 ﻿
 @{
     ViewBag.Title = "Lista";
+    //List<AppMvc.Models.Album> albunes = ViewBag.Albums;
 }
 
-<h2>Lista</h2>
+@{
+<h1>Lista</h1>
+<h2>Lista de Albunes:</h2>
+
+    foreach(var a in (ViewBag.Albums as IEnumerable<AppMvc.Models.Album>))
+    {
+        <p>@a.Title</p>
+    }
+    }
 
 
 

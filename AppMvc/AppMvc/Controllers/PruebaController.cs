@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppMvc.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -30,10 +31,15 @@ namespace AppMvc.Controllers
         //Solo para que me deje probal el ejemplo del ,libro, no iria aca esto..
         
 
-        public ActionResult Lista()
+       public ActionResult Lista()
 
         {
-          
+            var albums = new List<Album>();
+            for (int i = 0; i < 10; i++)
+            {
+                albums.Add(new Album { Title = "Product " + i });
+            }
+            ViewBag.Albums = albums;
             return View();
         }
     }

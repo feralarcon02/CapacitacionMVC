@@ -51,7 +51,7 @@ namespace MvcMusicStore.Controllers
             if (ModelState.IsValid)
             {
                 db.Albums.Add(album);
-                db.SaveChanges();
+                //db.SaveChanges();
                 return RedirectToAction("Index");  
             }
 
@@ -79,8 +79,8 @@ namespace MvcMusicStore.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(album).State = EntityState.Modified;
-                db.SaveChanges();
+                //db.Entry(album).State = EntityState.Modified;
+                //db.SaveChanges();
                 return RedirectToAction("Index");
             }
             ViewBag.GenreId = new SelectList(db.Genres, "GenreId", "Name", album.GenreId);
@@ -105,14 +105,25 @@ namespace MvcMusicStore.Controllers
         {            
             Album album = db.Albums.Find(id);
             db.Albums.Remove(album);
-            db.SaveChanges();
+            //db.SaveChanges();
             return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)
         {
-            db.Dispose();
+            //db.Dispose();
             base.Dispose(disposing);
+        }
+
+        public ActionResult List()
+        {
+            var albums = new List<Album>();
+            for (int i = 0; i < 10; i++)
+            {
+                albums.Add(new Album { Title = "Product " + i });
+            }
+            ViewBag.Albums = albums;
+            return View();
         }
     }
 }
