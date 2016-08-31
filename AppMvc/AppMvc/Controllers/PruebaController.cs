@@ -39,8 +39,8 @@ namespace AppMvc.Controllers
             {
                 albums.Add(new Album { Title = "Product " + i });
             }
-            ViewBag.Albums = albums;
-            return View();
+            //ViewBag.Albums = albums;
+            return View(albums);
         }
     }
 }
