@@ -10,6 +10,7 @@ namespace AppMvc.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Mensaje = "Pagina de descripcion de la aplicaicon";
             return View();
         }
 
