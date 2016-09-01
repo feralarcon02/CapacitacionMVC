@@ -14,6 +14,41 @@
         <li>@a.Title</li>
     }
     
+@{
+    // this is a block of code. For demonstration purposes,
+    // we'll create a "model" inline.
+    var items = new string[] { "one", "two", "three", "Cuatroooooo" };
+}
+<html>
+<head>
+    <title>Sample View</title>
+</head>
+<body>
+    <h1>Listando @items.Length items.</h1>
+    <ul>
+        @foreach (var item in items)
+        {
+            <li>The item name is @item.</li>
+        }
+    </ul>
+</body>
+</html>
 
+<p>
+    You should follow
+    @@aspnet
+</p>
 
+<h2>Como vemos de esta forma lo que me muestra esta mal..</h2>
+@{
+    string mensaje = "<script>alert('haacked!');</script>";
+}
+<span>@mensaje</span>
+
+<h2>Esta si seria una buena manera, agregando "@@Html.Raw" adelante de mensaje </h2>
+
+@{
+    string message = "<strong>This is bold!</strong>";
+}
+<span>@Html.Raw(message)</span>
 

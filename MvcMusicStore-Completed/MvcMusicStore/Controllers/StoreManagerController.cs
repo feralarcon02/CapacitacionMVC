@@ -66,6 +66,10 @@ namespace MvcMusicStore.Controllers
         public ActionResult Edit(int id)
         {
             Album album = db.Albums.Find(id);
+            if (album == null)
+            {
+                return HttpNotFound();
+            }
             ViewBag.GenreId = new SelectList(db.Genres, "GenreId", "Name", album.GenreId);
             ViewBag.ArtistId = new SelectList(db.Artists, "ArtistId", "Name", album.ArtistId);
             return View(album);

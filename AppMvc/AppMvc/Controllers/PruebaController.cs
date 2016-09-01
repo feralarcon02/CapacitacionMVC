@@ -42,5 +42,10 @@ namespace AppMvc.Controllers
             //ViewBag.Albums = albums;
             return View(albums);
         }
+
+        public ActionResult Edit()
+        {
+            return View();
+        }
     }
 }

@@ -196,6 +196,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\EjemplosRazorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PruebaController.cs" />
@@ -208,6 +209,10 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Samples\ShoppingCartViewModel\ProductModel.cs" />
+    <Compile Include="Samples\ShoppingCartViewModel\ShoppingCartController.cs" />
+    <Compile Include="Samples\ShoppingCartViewModel\ShoppingCartViewModel.cs" />
+    <Compile Include="Samples\SpecifyingViews\SampleController.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -273,6 +278,14 @@
     <Content Include="Views\Prueba\Index.cshtml" />
     <Content Include="Views\Prueba\View.cshtml" />
     <Content Include="Views\Prueba\Lista.cshtml" />
+    <Content Include="Views\ShoppingCart\Index.cshtml" />
+    <Content Include="Views\Prueba\Edit.cshtml" />
+    <Content Include="Views\EjemplosRazor\Index.cshtml" />
+    <Content Include="Views\Sample\PartialViewDemo.cshtml" />
+    <Content Include="Views\Sample\NotIndex.cshtml" />
+    <Content Include="Views\Sample\Message.cshtml" />
+    <Content Include="Views\Sample\Index.cshtml" />
+    <Content Include="Views\Example\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
