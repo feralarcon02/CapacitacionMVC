@@ -37,7 +37,8 @@ namespace AppMvc.Controllers
             var albums = new List<Album>();
             for (int i = 0; i < 10; i++)
             {
-                albums.Add(new Album { Title = "Product " + i });
+                albums.Add(new Album { Title = "Product " + i , Item = i});
+
             }
             //ViewBag.Albums = albums;
             return View(albums);
@@ -47,5 +48,16 @@ namespace AppMvc.Controllers
         {
             return View();
         }
+
+        public ActionResult Prueba2()
+        {
+            var albums = new List<Album2>();
+            albums.Add(new Album2
+            {
+                Titulo = "Libro de la selva"
+            });
+            return View(albums);
+        }
+
     }
 }

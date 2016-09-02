@@ -1,0 +1,11 @@
+﻿@model IEnumerable<AppMvc.Models.Album2>
+@{
+    ViewBag.Title = "Prueba2";
+}
+
+<h2>Prueba2</h2>
+
+@foreach(var a in Model)
+{
+    <h1>@a.Titulo</h1>
+}

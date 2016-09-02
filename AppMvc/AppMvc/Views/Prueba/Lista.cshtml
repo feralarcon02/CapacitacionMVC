@@ -1,6 +1,5 @@
 ﻿
 @model List<AppMvc.Models.Album>
-
 @{
     ViewBag.Title = "Lista";
     //List<AppMvc.Models.Album> albunes = ViewBag.Albums;
@@ -17,18 +16,18 @@
 @{
     // this is a block of code. For demonstration purposes,
     // we'll create a "model" inline.
-    var items = new string[] { "one", "two", "three", "Cuatroooooo" };
+    //var items = new string[] { "one", "two", "three", "Cuatroooooo" };
 }
 <html>
 <head>
-    <title>Sample View</title>
+    <title>Otro ejemplo..</title>
 </head>
 <body>
-    <h1>Listando @items.Length items.</h1>
+    <h1>Listando @Model.Count items.</h1>
     <ul>
-        @foreach (var item in items)
+        @foreach (var a in Model)
         {
-            <li>The item name is @item.</li>
+            <li>The item is @a.Item</li>
         }
     </ul>
 </body>
