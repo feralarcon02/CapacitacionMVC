@@ -15,5 +15,6 @@ namespace MvcCap4Modelos.Models
         public virtual string AlbumArtUrl { get; set; }
         public virtual Genre Genre { get; set; }
         public virtual Artist Artist { get; set; }
+        public virtual List<Review> Review { get; set; } 
     }
 }
