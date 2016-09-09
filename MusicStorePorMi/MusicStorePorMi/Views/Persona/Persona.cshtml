@@ -1,0 +1,22 @@
+﻿@model MusicStorePorMi.Models.Persona
+@{
+    ViewBag.Title = "Persona";
+}
+
+<h2>Persona</h2>
+@using (Html.BeginForm())
+{
+    <p>
+        <h3>Nombre: </h3>@Html.EditorFor(model => model.Nombre)    
+    </p>
+    <p>
+        <h3>Apellido: </h3>@Html.EditorFor(model => model.Apellido)
+    </p>
+
+    <p>
+        <h3>Fecha nacimiento: </h3>@Html.EditorFor(model => model.FechaNacimiento)
+    </p>
+    <p>
+        <input type="submit" value="Save" />
+    </p>
+}
